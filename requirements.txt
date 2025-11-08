@@ -1,5 +1,5 @@
 streamlit
-opencv-python
-numpy
-Pillow
-scikit-learn
+opencv-python-headless
+joblib
+scikit-learn==0.24.2
+numpy==1.23.5

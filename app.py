@@ -5,6 +5,7 @@ from PIL import Image
 import os
 import pickle
 import tempfile
+import joblib
 
 # Page config
 st.set_page_config(
@@ -59,9 +60,14 @@ def load_ml_models():
     )
 
     # Emotion recognition
+    """""
     emotion_recognition_model = pickle.load(
         open(os.path.join(models_dir, 'machinelearning_face_emotion.pkl'), 'rb')
     )
+    """
+    emotion_recognition_model = joblib.load(
+    os.path.join(models_dir, 'machinelearning_face_emotion.joblib')
+)
 
     return face_detector_model, face_feature_model, emotion_recognition_model
 
